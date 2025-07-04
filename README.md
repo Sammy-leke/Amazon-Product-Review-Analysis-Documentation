@@ -84,19 +84,34 @@ The dataset contains product listings scraped from Amazon, including:
 7. How many products have a discount of 50% or more?
     - Rows: Discount Group
     - Values: Category → Count
-16. What is the distribution of product ratings (e.g., how many products are rated 3.0, 4.0, etc.)?
+8. What is the distribution of product ratings (e.g., how many products are rated 3.0, 4.0, etc.)?
     - Rows: Rating
     - Values: Product Name → Count
-18. What is the total potential revenue (actual_price × rating_count) by category?
+9. What is the total potential revenue (actual_price × rating_count) by category?
     - Total potential revenue by category (Actual Price × Rating Count)
     - Add calculated column: =Actual Price * Rating Count
     - Rows: Category
     - Values: Discount % → summarize by Average
-
-20. What is the number of unique products per price range bucket (e.g., <₹200, ₹200–₹500, >₹500)?
-21. How does the rating relate to the level of discount?
-22. How many products have fewer than 1,000 reviews?
-23. Which categories have products with the highest discounts?
-24. Identify the top 5 products in terms of rating and number of reviews combined
-
+10. What is the number of unique products per price range bucket (e.g., <₹200, ₹200–₹500, >₹500)?
+    - Number of unique products per price range bucket
+    - Create new column Unique Products Price Bucket: =IF(D2<200, "<200", IF(D2<=500, "200 – 500", ">500"))
+    - Rows: Unique Products Price Bucket
+    - Values: Unique Products Price Bucket → Count
+11. How does the rating relate to the level of discount?
+    - Create a new column Discount buckets like: 0–10%, 11–20%, ..., 91–100%
+    - Excel Formular=IF([@Discount%]<=10, "0-10%", IF([@Discount%]<=20, "11-20%", IF([@Discount%]<=30, "21-30%", ...)))
+    - Rows: Discount Bucket
+    - Values: Rating Count → summarize as Average
+12. How many products have fewer than 1,000 reviews?
+    - Create a new Review Group
+    - Excel Formular==IF([@[Rating Count]]<=1000, "Yes", "No")
+    - Rows: Review Group
+    - Values: Product Name → Count
+13. Which categories have products with the highest discounts?
+    - Rows: Category
+    - Values: Discounted Price → Max
+14. Identify the top 5 products in terms of rating and number of reviews combined
+    - Create calculated column: = ([@Rating]+([@[Rating Count]]/1000) (Choose a factor like 1000 to balance weight)
+    - Rows: Product ID
+    - Values: Rating Score → Sum
 
