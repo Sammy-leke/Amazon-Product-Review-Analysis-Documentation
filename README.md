@@ -114,4 +114,12 @@ The dataset contains product listings scraped from Amazon, including:
     - Create calculated column: = ([@Rating]+([@[Rating Count]]/1000) (Choose a factor like 1000 to balance weight)
     - Rows: Product ID
     - Values: Rating Score → Sum
+   
+---
+
+## 📂 Files Included
+
+- [Amazon Product Review Analysis.xlsx](Amazon%20Product%20Review%20Analysis.xlsx)
+- [Dashboard_screenshot.png](dashboard_screenshot.png)
+
 
