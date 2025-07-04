@@ -1,8 +1,19 @@
-📊 KMS SQL Analysis Report
+## 📊 KMS SQL Analysis Report
 This repository contains a comprehensive SQL-based business analysis for **KMS** using two realistic case scenarios. The goal is to derive actionable insights from the dataset and recommend strategies to increase sales, optimize logistics, and improve customer relationships.
 
 ---
-📁 Case Scenario I – Sales & Logistics Performance
+
+## 📁 Dataset Overview
+
+The dataset is based on a business scenario of **KMS**, a retail company operating across various customer segments and regions. It contains information about:
+
+- Customer demographics
+- Product categories and sub-categories
+- Sales, profit, shipping details
+- Order priorities, returns, and regions
+
+---
+## 📁 Case Scenario I – Sales & Logistics Performance
 1. Which product category had the highest sales?
     - SQL Query: SELECT [Product Category], SUM(Sales) AS [Total Sales]
                  FROM dbo.[KMS Sql Case Study]
@@ -47,7 +58,7 @@ This repository contains a comprehensive SQL-based business analysis for **KMS**
 
 ---
 
-📁 Case Scenario II – Customer & Profitability Insights
+## 📁 Case Scenario II – Customer & Profitability Insights
 
 6. Who are the most valuable customers, and what products or services do they typically purchase?
     - SQL Query: WITH [Customers Sales] AS (
@@ -153,7 +164,7 @@ appropriately spent shipping costs based on the Order Priority? Explain your ans
 
 ---
 
-📈 Summary of Key Recommendations
+## 📈 Summary of Key Recommendations
 
 - Leverage top-performing categories and regions for growth.
 - Use personalized strategies to uplift bottom-tier customers.
