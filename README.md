@@ -120,6 +120,6 @@ The dataset contains product listings scraped from Amazon, including:
 ## 📂 Files Included
 
 - [Amazon Product Review Analysis.xlsx](Amazon%20Product%20Review%20Analysis.xlsx)
-- [Dashboard_screenshot.png](dashboard_screenshot.png)
+- [Dashboard_screenshot.png](Dashboard_screenshot.png)
 
 
