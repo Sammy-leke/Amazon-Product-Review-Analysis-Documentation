@@ -1,4 +1,3 @@
-# My-Data-Analysis-Documentation
 # 🛒 Amazon Product Review Analysis (Excel Dashboard)
 
 A data-driven analysis of Amazon product listings using Excel, focusing on pricing, customer engagement, and performance metrics across multiple product categories. This project demonstrates strong skills in data cleaning, transformation, visualization, and business insight generation.
